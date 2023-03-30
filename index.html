@@ -1,0 +1,47 @@
+
+<html>
+  <head>
+    <title>Todo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Heading  -->
+    <h1>Todo List</h1>
+    <div id="container">
+
+      <!-- Text box where user can enter the task -->
+      <div class=user-input>
+        <img src="https://cdn-icons-png.flaticon.com/512/768/768869.png" class="taskInput-icon">
+        <input placeholder="Type your todo list" class="add-task" id="add">
+      </div>
+      
+      <!-- complete tasks operations -->
+      <div class="tasks-complete-filter">
+        <a href="#" id="complete-all-tasks" class="filter-options">
+          <img src="ticks-icon2.PNG" class="ticks-icon
+          ">
+          Complete all tasks
+        </a>
+        <a href="#" id="clear-completed" class="filter-options">clear completed</a>
+      </div>
+      
+      <!-- Showing User added todo tasks -->
+      <ul id="list">
+        <!-- Rendering the list from javascript function -->
+      </ul>
+
+      <!-- Rendering todo tasks based on user choice of selection -->
+      <div class="rendering-tasks">
+        <span id="tasks-left">Tasks left: <span id="tasks-counter">0</span></span>
+        <div class="rendering-lists"></div>
+        <span><a href="#" id="all" class="render-options">All</a></span>
+        <span><a href="#" id="uncomplete-tasks" class="render-options">UnComplete</a></span>
+        <span><a href="#" id="completed-tasks" class="render-options">Completed</a></span>
+      </div>
+    </div>
+
+    <!-- Adding javascript file -->
+    <script src="todo.js"></script>
+  </body>
+</html>

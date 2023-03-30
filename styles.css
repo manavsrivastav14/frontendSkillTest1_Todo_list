@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  text-align: center;
+}
+#container {
+  width: 500px;
+  border:1px solid grey;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+/*Taking user input textbox*/
+.taskInput-icon{
+  background-color: transparent;
+  padding-bottom: 1px;
+  height:25px;
+  width:30px;
+}
+.user-input{
+  outline: none;
+    font-size: 15px;
+    margin: 11px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 3px;
+    display: flex;
+    padding: 11px;
+    border-radius: 15px;
+    background-color: rgb(226, 221, 221);
+}
+/* Completed Tasks filter options */
+.tasks-complete-filter{
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 93%;
+  padding-bottom: 5px;
+  border-bottom:1px solid #f3f3f3;  
+}
+.filter-options{
+  text-decoration: none;
+  color: grey;
+  font-size: 10px;
+  display: flex;
+}
+.ticks-icon{
+  background-color: transparent;
+  /* padding-bottom: 1px; */
+  margin-left: 15px;
+  margin-right: 5px;
+  height:20px;
+  width:20px;
+  color: gray;
+}
+/*Todo list display */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid #e5e5e5; */
+}
+ul li {
+  padding: 10px 20px;
+  /* padding-left: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+}
+ul li:hover {
+  background: #f3f3f3;
+}
+
+/*Hiding the by default checkbox*/
+#list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+}
+/*cutomizing checkbox style*/
+#list label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+/*Adding a check inside checkbox when task is completed*/
+#list input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 6px;
+  height: 14px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/*Striking the task text when checkbox is checked*/
+#list input:checked + label {
+  text-decoration: line-through;
+  color: black;
+}
+/*Delete icon*/
+.delete {
+  height: 28px;
+    padding: 5px 0px;
+    border-radius: 3px;
+}
+.delete:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+/*Todo list text*/
+.add-task {
+  width: 80%;
+  outline: none;
+    font-size: 15px;
+    padding-left: 11px;
+    border: 1px solid transparent;
+    margin-bottom: 3px;
+    background-color: transparent;
+}
+#tasks-left {
+  margin-bottom: 20px;
+  font-size: 13px;
+    margin-left: 2px;
+    color: gray;
+}
+
+/*Rendering task lists options*/
+.rendering-tasks{
+  width: 91%;
+  margin: 10px 0px 5px 20px;
+  border-top: 1px solid #f3f3f3;
+}
+.rendering-lists{
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 45%;
+}
+.render-options{
+  text-decoration: none;
+  color: grey;
+  font-size: 10px;
+  margin:0px 3px;
+}
+.render-options:hover{
+  color: black;
+}
+.render-options a:target{
+  color: black;
+}
